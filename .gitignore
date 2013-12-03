@@ -1,0 +1,12 @@
+# backup files
+*~
+
+# dart2js
+*.dart.js
+*.js.map
+*.js.deps
+
+# pub package manager
+packages
+deploy
+
