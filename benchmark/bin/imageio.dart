@@ -38,16 +38,16 @@ void writeImagePGMSync(String fileName, List<RGB> rgbData, int xSize, int ySize,
 //  var outStream = outFile.openWrite(mode: FileMode.WRITE, encoding: ASCII);
   
   // write header
-  outFile.writeln("P3");
-  outFile.writeln(xSize);
-  outFile.writeln(ySize);
-  outFile.writeln(colorMax);
+  outFile.writeAsStringSync("P3");
+  outFile.writeAsStringSync(xSize);
+  outFile.writeAsStringSync(ySize);
+  outFile.writeAsStringSync(colorMax);
   
   // loop over pixel
 //  for (var i=0; i<xSize*ySize; i++) {
 //    outStream.writeln(rgbData[i].toString());
 //  }
-  rgbData.forEach((pix) { outFile.writeln(pix.toString()); });
+  rgbData.forEach((pix) { outFile.writeAsStringSync(pix.toString()); });
   
-  return outFile.close();
+  return outFile;
 }
