@@ -61,7 +61,7 @@ void main() {
   print('Elapsed time ${sw6.elapsedMilliseconds}ms');
   
   sw7.start();
-  writeImagePGM('mandelbrot_640_480.pgm', pixelsLarge, 640, 480, 255).then( (_) {
+  writeImagePGM('..\..\mandelbrot_640_480.pgm', pixelsLarge, 640, 480, 255).then( (_) {
     print('Mandelbrot set (640:480) written to file.');
     sw7.stop();
     print('Elapsed time ${sw7.elapsedMilliseconds}ms');
