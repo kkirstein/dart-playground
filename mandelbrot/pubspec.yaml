@@ -1,0 +1,5 @@
+name: mandelbrot_gui
+description: A sample web application generating Mandelbrot sets
+dependencies:
+  angular: '>=0.9.8'
+  shadow_dom: any

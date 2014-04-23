@@ -4,7 +4,7 @@
 //
 library benchmark;
 
-import 'dart:async';
+//import 'dart:async';
 
 import 'fib.dart';
 import 'perfectnumbers.dart';
