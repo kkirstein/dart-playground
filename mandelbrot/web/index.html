@@ -7,21 +7,34 @@
 </head>
 
 <body>
-  <h1>Mandelbrot</h1>
+  <h1>Mandelbrot GUI</h1>
 
-  <p>Hello world from Dart!</p>
-
-  <div control-panel>
+  <div id="control-panel">
     <ul>
-      <li>Width: <input type="text" ng-model="width"></li>
-      <li>Height: <input type="text" ng-model="height"></li>
-      <li>X-Center: <input type="text" ng-model="xcenter"></li>
-      <li>Y-Center: <input type="text" ng-model="ycenter"></li>
-      <li>Pixel-Size: <input type="text" ng-model="pixelSize"></li>
+      <li>
+        <label>Width:</label>
+        <input type="text" ng-model="width">
+      </li>
+      <li>
+        <label>Height:</label>
+        <input type="text" ng-model="height">
+      </li>
+      <li>
+        <label>X-Center:</label>
+        <input type="text" ng-model="xcenter">
+      </li>
+      <li>
+        <label>Y-Center:</label>
+        <input type="text" ng-model="ycenter">
+      </li>
+      <li>
+        <label>Pixel-Size:</label>
+        <input type="text" ng-model="pixelSize">
+      </li>
     </ul>
   </div>
 
-  <div image-panel>
+  <div id="image-panel">
     <canvas id="mandelbrot-image" width="640" height="480"></canvas>
   </div>
 

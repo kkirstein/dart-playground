@@ -1,6 +1,6 @@
 
 body {
-  background-color: #F8F8F8;
+  background-color: #646464;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: normal;
@@ -9,7 +9,36 @@ body {
 }
 
 h1, p {
-  color: #333;
+  color: black;
+}
+
+#control-panel {
+  float: left;
+  width: 30%;
+  background-color: #f8f8f8;
+  border-radius: 15px;
+}
+#control-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px;
+  float: left;
+}
+#control-panel ul li {
+  float: left;
+}
+#control-panel ul li label {
+  float: left;
+  width: 5em;
+  text-align: right;
+}
+#control-panel ul li input {
+  /* text-align: right; */
+}
+
+#image-panel {
+  float: right;
+  background-color: #f8f8f8;
 }
 
 #sample_container_id {
