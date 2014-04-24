@@ -9,7 +9,8 @@
 # pub package manager
 packages
 deploy
-pubspec.lock
+benchmark/pubspec.lock
+mandelbrot/pubspec.lock
 
 # other generated files
 *.pgm
