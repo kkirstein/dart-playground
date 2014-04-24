@@ -9,6 +9,7 @@
 # pub package manager
 packages
 deploy
+pubspec.lock
 
 # other generated files
 *.pgm
