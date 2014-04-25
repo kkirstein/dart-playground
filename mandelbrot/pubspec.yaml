@@ -1,5 +1,7 @@
 name: mandelbrot_gui
 description: A sample web application generating Mandelbrot sets
 dependencies:
-  angular: '>=0.9.8'
+  angular: any
+  browser: any
+  js: any
   shadow_dom: any

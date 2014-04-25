@@ -3,7 +3,9 @@ library mandelbrot_gui_controller;
 import 'package:angular/angular.dart';
 import 'dart:html';
 
-@NgController(selector: '[mandelbrot-gui]', publishAs: 'ctrl')
+@Controller(
+    selector: '[mandelbrot-gui]',
+    publishAs: 'ctrl')
 class MandelbrotGuiController {
 
   ImageData img;
@@ -14,7 +16,6 @@ class MandelbrotGuiController {
   double yCenter;
   double pixelSize;
   
-
   // constructor
   MandelbrotGuiController() {
     _defaultData();

@@ -1,11 +1,9 @@
 library mandelbrot_gui;
 
 import 'package:angular/angular.dart';
-import 'package:mandelbrot_gui/mandelbrot_gui.dart';
+import 'package:angular/application_factory.dart';
 
-// Temporary, please follow https://github.com/angular/angular.dart/issues/476
-@MirrorsUsed(targets: const ['mandelbrot_gui_controller'], override: '*')
-import 'dart:mirrors';
+import 'package:mandelbrot_gui/mandelbrot_gui.dart';
 
 class MandelbrotModule extends Module {
   // constructor
@@ -15,5 +13,7 @@ class MandelbrotModule extends Module {
 }
 
 void main() {
-  ngBootstrap(module: new MandelbrotModule());
+  applicationFactory()
+    .addModule(new MandelbrotModule())
+    .run();
 }

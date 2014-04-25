@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html ng-app>
 <head>
-<meta charset="utf-8">
-<title>Mandelbrot GUI</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <title>Mandelbrot GUI</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <h1>Mandelbrot GUI</h1>
+  <div mandelbrot-gui>
 
-  <div id="control-panel">
-    <ul>
-      <li>
-        <label>Width:</label>
-        <input type="text" ng-model="width">
-      </li>
-      <li>
-        <label>Height:</label>
-        <input type="text" ng-model="height">
-      </li>
-      <li>
-        <label>X-Center:</label>
-        <input type="text" ng-model="xcenter">
-      </li>
-      <li>
-        <label>Y-Center:</label>
-        <input type="text" ng-model="ycenter">
-      </li>
-      <li>
-        <label>Pixel-Size:</label>
-        <input type="text" ng-model="pixelSize">
-      </li>
-    </ul>
+    <h1>Mandelbrot GUI</h1>
+
+   
+    <div id="control-panel">
+      <ul>
+        <li>
+          <label>Width:</label>
+          <input type="text" ng-model="ctrl.width">
+        </li>
+        <li>
+          <label>Height:</label>
+          <input type="text" ng-model="ctrl.height">
+        </li>
+        <li>
+          <label>X-Center:</label>
+          <input type="text" ng-model="ctrl.xcenter">
+        </li>
+        <li>
+          <label>Y-Center:</label>
+          <input type="text" ng-model="ctrl.ycenter">
+        </li>
+        <li>
+          <label>Pixel-Size:</label>
+          <input type="text" ng-model="ctrl.pixelSize">
+        </li>
+      </ul>
+    </div>
+  
+    <div id="image-panel">
+      <canvas id="mandelbrot-image" width="640" height="480"></canvas>
+    </div>
+  
   </div>
-
-  <div id="image-panel">
-    <canvas id="mandelbrot-image" width="640" height="480"></canvas>
-  </div>
-
 
   <script src="packages/shadow_dom/shadow_dom.min.js"></script>
   <script type="application/dart" src="main.dart"></script>

@@ -16,7 +16,7 @@ h1, p {
   float: left;
   width: 30%;
   background-color: #f8f8f8;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 #control-panel ul {
   list-style: none;
@@ -39,6 +39,7 @@ h1, p {
 #image-panel {
   float: right;
   background-color: #f8f8f8;
+  border-radius: 10px;
 }
 
 #sample_container_id {
