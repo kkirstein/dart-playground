@@ -1,4 +1,4 @@
-library mandelbrot_gui;
+library mandelbrot;
 
 import 'package:angular/angular.dart';
 import 'package:angular/application_factory.dart';
