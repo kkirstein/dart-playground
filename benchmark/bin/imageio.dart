@@ -39,9 +39,9 @@ void writeImagePGMSync(String fileName, List<RGB> rgbData, int xSize, int ySize,
   
   // write header
   outFile.writeAsStringSync("P3");
-  outFile.writeAsStringSync(xSize);
-  outFile.writeAsStringSync(ySize);
-  outFile.writeAsStringSync(colorMax);
+  outFile.writeAsStringSync(xSize.toString());
+  outFile.writeAsStringSync(ySize.toString());
+  outFile.writeAsStringSync(colorMax.toString());
   
   // loop over pixel
   rgbData.forEach((pix) { outFile.writeAsStringSync(pix.toString()); });
