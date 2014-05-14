@@ -45,12 +45,13 @@ class MandelbrotGuiController {
     // convert to ImageData:
     //List<int> pixData = new List(4*width*height);
     ImageData img = _getImageData();
-    List<int> pixData = img.data;
+    //List<int> pixData = img.data;
     var counter = 0;
     for (RGB pix in imgRgb) {
-      pixData[counter] = pix.r;
-      pixData[counter+1] = pix.g;
-      pixData[counter+2] = pix.b;
+      img.data[counter] = pix.r;
+      img.data[counter+1] = pix.g;
+      img.data[counter+2] = pix.b;
+      img.data[counter+3] = 255;
       counter += 4;
     }
     //_img.data = pixData;
