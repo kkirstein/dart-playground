@@ -1,6 +1,10 @@
 // rgb.dart
-// RGB class to hold pixel values
+// RGB class(es) to hold pixel values
 //
+
+/**
+ * RGB holds red, green, blue pixel values
+ */
 class RGB {
   int r, g, b;
   
@@ -18,5 +22,25 @@ class RGB {
   String toString([String sep]) {
     if (sep == null) return "${r.toString()} ${g.toString()} ${b.toString()}";
     return [r.toString(), g.toString(), b.toString()].join(sep);
+  }
+}
+
+/**
+ * RGBA holds red, green, blue & alpha channel values for a single pixel
+ */
+class RGBA {
+  int r, g, b, a;
+  
+  RGBA(this.r, this.g, this.b, this.a);
+  RGBA.fromIntList(List<int> rgba) : r = rgba[0], g = rgba[1], b = rgba[2], a = rgba[3];
+  RGBA.fromStringList(List<String> rgba) :
+    r = int.parse(rgba[0]),
+    g = int.parse(rgba[1]),
+    b = int.parse(rgba[2]),
+    a = int.parse(rgba[3]);
+  
+  String toString([String sep]) {
+    if (sep == null) return "${r.toString()} ${g.toString()} ${b.toString()} ${a.toString()}";
+    return [r.toString(), g.toString(), b.toString(), a.toString()].join(sep);
   }
 }
