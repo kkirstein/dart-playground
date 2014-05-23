@@ -12,27 +12,26 @@ import 'rgb.dart';
 class MandelbrotGuiController {
 
   // public properties
-  String width;
-  String height;
+  int width;
+  int height;
   String xCenter;
   String yCenter;
-  String pixelSize;
+  int scale;
   
   // private properties
   ImageData _img;
   CanvasRenderingContext2D _context;
   
-  int _width;
-  int _height;
+//  int _width;
+//  int _height;
   double _xCenter;
   double _yCenter;
-  double _pixelSize;
+//  double _pixelSize;
 
   
   // constructor
   MandelbrotGuiController() {
     _defaultData();
-    //_setupCanvas();
     validateParams();
   }
   
@@ -41,7 +40,7 @@ class MandelbrotGuiController {
    */
   void updateSet() {
     
-    List<RGB> imgRgb = mandelbrotRgb(_width, _height, _xCenter, _yCenter, _pixelSize);
+    List<RGB> imgRgb = mandelbrotRgb(width, height, _xCenter, _yCenter, scale.toDouble()/width.toDouble());
     // convert to ImageData:
     //List<int> pixData = new List(4*width*height);
     ImageData img = _getImageData();
@@ -64,20 +63,20 @@ class MandelbrotGuiController {
    */
   void validateParams() {
 
-    _width = int.parse(width);
-    _height = int.parse(height);
+//    _width = int.parse(width);
+//    _height = int.parse(height);
     _xCenter = double.parse(xCenter);
     _yCenter = double.parse(yCenter);
-    _pixelSize = double.parse(pixelSize);
+//    _pixelSize = double.parse(pixelSize);
   }
   
   // private methods
   void _defaultData() {
-    this.width = "640";
-    this.height = "480";
-    this.xCenter = "0.0";
-    this.yCenter = "0.9";
-    this.pixelSize = "4.0";
+    this.width = 640;
+    this.height = 480;
+    this.xCenter = "-0.5";
+    this.yCenter = "0.0";
+    this.scale = 4;
   }
   
   void _setupCanvas() {
