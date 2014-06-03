@@ -6,7 +6,7 @@ library imageio;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:html' show ImageData;
+//import 'dart:html' show ImageData;
 import 'dart:io';
 
 import 'rgb.dart';
@@ -33,15 +33,15 @@ Future writeImagePGM(String fileName, List<RGB> rgbData, int xSize, int ySize, i
   return outStream.close();
 }
 
-Future writeImageDataPGM(String fileName, ImageData img) {
-
-  var outFile = new File(fileName);
-  var outStream = outFile.openWrite(mode: FileMode.WRITE, encoding: ASCII);
-
-  // TODO
-  
-  return outStream.close();  
-}
+//Future writeImageDataPGM(String fileName, ImageData img) {
+//
+//  var outFile = new File(fileName);
+//  var outStream = outFile.openWrite(mode: FileMode.WRITE, encoding: ASCII);
+//
+//  // TODO
+//  
+//  return outStream.close();  
+//}
 
 void writeImagePGMSync(String fileName, List<RGB> rgbData, int xSize, int ySize, int colorMax) {
   
