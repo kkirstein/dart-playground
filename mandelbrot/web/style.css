@@ -17,6 +17,7 @@ h1, p {
   width: 30%;
   background-color: #f8f8f8;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 #control-panel ul {
   list-style: none;
@@ -25,19 +26,20 @@ h1, p {
   float: left;
 }
 #control-panel ul li {
-  float: left;
+  /* float: left; */
 }
 #control-panel ul li label {
   float: left;
-  width: 5em;
+  min-width: 7em;
   text-align: right;
 }
 #control-panel ul li input {
-  /* text-align: right; */
 }
 
 #image-panel {
   float: right;
   background-color: #f8f8f8;
   border-radius: 10px;
+  padding: 10px;
+  margin-left: 10px;
 }

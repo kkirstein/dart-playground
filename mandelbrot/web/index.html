@@ -16,29 +16,32 @@
       <ul>
         <li>
           <label>Width:</label>
-          <input type="text" ng-model="ctrl.width" ng-change="ctrl.validateParams(); ctrl.updateSet()">
+          <input type="number" ng-model="ctrl.width">
         </li>
         <li>
           <label>Height:</label>
-          <input type="text" ng-model="ctrl.height" ng-change="ctrl.validateParams(); ctrl.updateSet()">
+          <input type="number" ng-model="ctrl.height">
         </li>
         <li>
           <label>X-Center:</label>
-          <input type="text" ng-model="ctrl.xCenter" ng-change="ctrl.validateParams(); ctrl.updateSet()">
+          <input type="text" ng-model="ctrl.xCenter" ng-change="ctrl.validateParams()">
         </li>
         <li>
           <label>Y-Center:</label>
-          <input type="text" ng-model="ctrl.yCenter" ng-change="ctrl.validateParams(); ctrl.updateSet()">
+          <input type="text" ng-model="ctrl.yCenter" ng-change="ctrl.validateParams()">
         </li>
         <li>
-          <label>Pixel-Size:</label>
-          <input type="text" ng-model="ctrl.pixelSize" ng-change="ctrl.validateParams(); ctrl.updateSet()">
+          <label>Pixel-Scale:</label>
+          <input type="number" ng-model="ctrl.scale">
+        </li>
+        <li>
+          <button ng-click="ctrl.updateSet()">Update</button>
         </li>
       </ul>
     </div>
   
     <div id="image-panel">
-      <canvas id="mandelbrot-image" width="640" height="480"></canvas>
+      <canvas id="mandelbrot-image" width="{{ctrl.width}}" height="{{ctrl.height}}"></canvas>
     </div>
   
   </div>

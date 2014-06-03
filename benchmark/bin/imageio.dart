@@ -33,15 +33,17 @@ Future writeImagePGM(String fileName, List<RGB> rgbData, int xSize, int ySize, i
   return outStream.close();
 }
 
-//Future writeImageDataPGM(String fileName, ImageData img) {
-//
-//  var outFile = new File(fileName);
-//  var outStream = outFile.openWrite(mode: FileMode.WRITE, encoding: ASCII);
-//
-//  // TODO
-//  
-//  return outStream.close();  
-//}
+/*
+Future writeImageDataPGM(String fileName, ImageData img) {
+
+  var outFile = new File(fileName);
+  var outStream = outFile.openWrite(mode: FileMode.WRITE, encoding: ASCII);
+
+  // TODO
+  
+  return outStream.close();  
+}
+ */
 
 void writeImagePGMSync(String fileName, List<RGB> rgbData, int xSize, int ySize, int colorMax) {
   
