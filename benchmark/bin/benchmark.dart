@@ -42,29 +42,33 @@ void main() {
   
   // mandelbrot set
   sw4.start();
-  print('Calculate mandelbrot set for 180x120 pixel...');
+//  print('Calculate mandelbrot set for 180x120 pixel...');
   var pixels = mandelbrotRgb(180, 120, -0.5, 0.0, 4.0/180);
-  sw4.stop();
-  print('Elapsed time ${sw4.elapsedMilliseconds}ms');
+  pixels.whenComplete(() {
+    sw4.stop();
+    print('Mandelbrot set (180:120) calculated. Elapsed time ${sw4.elapsedMilliseconds}ms');    
+  });
   
   sw5.start();
-  writeImagePGM(r"..\..\mandelbrot.pgm", pixels, 180, 120, 255).then( (_) {
-    print('Mandelbrot set (180:120) written to file.');
-    sw5.stop();
-    print('Elapsed time ${sw5.elapsedMilliseconds}ms');
+  pixels.then((p) => writeImagePGM(r"..\..\mandelbrot.pgm", p, 180, 120, 255))
+    .then( (_) {
+      sw5.stop();
+      print('Mandelbrot set (180:120) written to file. Elapsed time ${sw5.elapsedMilliseconds}ms');
   });
   
   sw6.start();
-  print('Calculate mandelbrot set for 640x480 pixel...');
+//  print('Calculate mandelbrot set for 640x480 pixel...');
   var pixelsLarge = mandelbrotRgb(640, 480, -0.5, 0.0, 4.0/640);
-  sw6.stop();
-  print('Elapsed time ${sw6.elapsedMilliseconds}ms');
+  pixelsLarge.whenComplete(() {
+    sw6.stop();
+    print('Mandelbrot set (640:480) calculated. Elapsed time ${sw6.elapsedMilliseconds}ms');    
+  });
   
   sw7.start();
-  writeImagePGM(r"..\..\mandelbrot_640_480.pgm", pixelsLarge, 640, 480, 255).then( (_) {
-    print('Mandelbrot set (640:480) written to file.');
-    sw7.stop();
-    print('Elapsed time ${sw7.elapsedMilliseconds}ms');
+  pixelsLarge.then((p) => writeImagePGM(r"..\..\mandelbrot_640_480.pgm", p, 640, 480, 255))
+    .then( (_) {
+      sw7.stop();
+      print('Mandelbrot set (640:480) written to file. Elapsed time ${sw7.elapsedMilliseconds}ms');
   });
 
       

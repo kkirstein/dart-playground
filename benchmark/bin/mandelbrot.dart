@@ -5,7 +5,7 @@ library mandelbrot;
 
 //import 'dart:io';
 //import 'dart:convert';
-//import 'dart:async';
+import 'dart:async';
 
 import 'complex.dart';
 import 'rgb.dart';
@@ -76,20 +76,22 @@ RGB pixelRgb(double x, double y) {
 }
 
 // generate mandelbrot set
-List<RGB> mandelbrotRgb(int xMax, int yMax, double xCenter, double yCenter, double pixelSize) {
+Future<List<RGB>> mandelbrotRgb(int xMax, int yMax, double xCenter, double yCenter, double pixelSize) {
   
-  List<RGB> mandelbrot = new List();
-  
-  // loop over pixel
-  var xOffset = xCenter - 0.5*pixelSize*(xMax+1);
-  var yOffset = yCenter + 0.5*pixelSize*(yMax+1);
-  for (var y=1; y<=yMax; y++) {
-    for (var x=1; x<=xMax; x++) {
-      mandelbrot.add(pixelRgb(xOffset + x*pixelSize, yOffset - y*pixelSize));
-//      mandelbrot[(x*y)-1] = pixelRgb(xOffset + x*pixelSize, yOffset - y*pixelSize);
+  return new Future( () {
+    List<RGB> mandelbrot = new List();
+    
+    // loop over pixel
+    var xOffset = xCenter - 0.5*pixelSize*(xMax+1);
+    var yOffset = yCenter + 0.5*pixelSize*(yMax+1);
+    for (var y=1; y<=yMax; y++) {
+      for (var x=1; x<=xMax; x++) {
+        mandelbrot.add(pixelRgb(xOffset + x*pixelSize, yOffset - y*pixelSize));
+  //      mandelbrot[(x*y)-1] = pixelRgb(xOffset + x*pixelSize, yOffset - y*pixelSize);
+      }
     }
-  }
-  
-  return mandelbrot;
+    
+    return mandelbrot;
+  });
 }
 
