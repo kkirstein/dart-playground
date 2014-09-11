@@ -8,7 +8,7 @@ import 'package:mandelbrot_gui/mandelbrot_gui.dart';
 class MandelbrotModule extends Module {
   // constructor
   MandelbrotModule() {
-    type(MandelbrotGuiController);
+    bind(MandelbrotGuiController);
   }
 }
 
