@@ -6,9 +6,7 @@ import 'dart:html';
 import 'mandelbrot.dart';
 import 'rgb.dart';
 
-@Controller(
-    selector: '[mandelbrot-gui]',
-    publishAs: 'ctrl')
+@Injectable()
 class MandelbrotGuiController {
 
   // public properties
