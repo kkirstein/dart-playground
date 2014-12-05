@@ -1,5 +1,7 @@
 # backup files
 *~
+*.swp
+
 
 # dart2js
 *.dart.js
@@ -9,8 +11,8 @@
 # pub package manager
 packages
 deploy
-benchmark/pubspec.lock
-mandelbrot/pubspec.lock
+.pub
+*/pubspec.lock
 
 # other generated files
 *.pgm
