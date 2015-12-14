@@ -1,4 +1,7 @@
-name: playground
-description: A sample command-line application
-#dependencies:
-#  unittest: any
+name: benchmark
+description: A collection of (micro-) benchmarks
+environment:
+        sdk: '>=1.8.3 <2.0.0'
+dependencies:
+        image: ^1.1.22
+
