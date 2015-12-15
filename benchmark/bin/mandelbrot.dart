@@ -260,11 +260,11 @@ Future<Image> mandelbrotRgb(
     var img = new Image(xMax, yMax, Image.RGB);
 
     // loop over pixel
-    var xOffset = xCenter - 0.5 * pixelSize * (xMax + 1);
-    var yOffset = yCenter + 0.5 * pixelSize * (yMax + 1);
+    final xOffset = xCenter - 0.5 * pixelSize * (xMax + 1);
+    final yOffset = yCenter + 0.5 * pixelSize * (yMax + 1);
     for (var y = 0; y < yMax; y++) {
       for (var x = 0; x < xMax; x++) {
-        var pix = pixelRgb(xOffset + x * pixelSize, yOffset - y * pixelSize);
+        final pix = pixelRgb(xOffset + x * pixelSize, yOffset - y * pixelSize);
         img.setPixelRGBA(x, y, pix.r, pix.g, pix.b);
       }
     }
