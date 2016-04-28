@@ -16,4 +16,5 @@ deploy
 
 # other generated files
 *.pgm
+*.png
 
