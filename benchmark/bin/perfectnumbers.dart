@@ -51,12 +51,9 @@ Future<List<int>> perfectnumbers(int n) async {
 }
 
 Future<List<int>> perfectnumbers2(int n) async {
-	var pn = [];
 	var inp = new List<int>.generate(n, (i) => i);
 
 	var f = Future.forEach(inp, isPerfect);
 
 	return f;
 }
-
-

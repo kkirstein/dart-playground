@@ -1,7 +1,7 @@
 name: benchmark
 description: A collection of (micro-) benchmarks
 environment:
-        sdk: '>=1.8.3 <2.0.0'
+        sdk: '>=1.16.0 <2.0.0'
 dependencies:
         image: ^1.1.22
 

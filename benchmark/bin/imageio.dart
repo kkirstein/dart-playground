@@ -4,7 +4,7 @@
 //
 library imageio;
 
-import 'dart:async';
+//import 'dart:async';
 import 'dart:convert';
 //import 'dart:html' show ImageData;
 import 'dart:io';
@@ -57,8 +57,8 @@ Future writeImageDataPGM(String fileName, ImageData img) {
   var outStream = outFile.openWrite(mode: FileMode.WRITE, encoding: ASCII);
 
   // TODO
-  
-  return outStream.close();  
+
+  return outStream.close();
 }
  */
 

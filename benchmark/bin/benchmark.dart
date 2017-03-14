@@ -14,7 +14,7 @@ import 'package:image/image.dart';
 import 'fib.dart';
 import 'perfectnumbers.dart';
 import 'mandelbrot.dart';
-import 'imageio.dart';
+//import 'imageio.dart';
 
 void main() {
 	// setup stopwatch
@@ -26,7 +26,7 @@ void main() {
 	var sw5 = new Stopwatch();
 	var sw6 = new Stopwatch();
 	var sw7 = new Stopwatch();
-	var sw8 = new Stopwatch();
+	//var sw8 = new Stopwatch();
 
 	// fibonacci series
 	sw1.start();
